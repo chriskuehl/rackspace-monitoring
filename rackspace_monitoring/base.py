@@ -35,7 +35,7 @@ class MonitoringZone(object):
 
     def __repr__(self):
         return ('<MonitoringZone: id=%s label=%s provider=%s ...>' %
-                (self.id, self.label, self.driver.name)).encode('utf-8')
+                (self.id, self.label, self.driver.name))
 
 
 class Entity(object):
@@ -79,7 +79,7 @@ class Entity(object):
 
     def __repr__(self):
         return ('<Entity: id=%s label=%s provider=%s ...>' %
-                (self.id, self.label, self.driver.name)).encode('utf-8')
+                (self.id, self.label, self.driver.name))
 
 
 class Notification(object):
@@ -100,7 +100,7 @@ class Notification(object):
 
     def __repr__(self):
         return ('<Notification: id=%s, label=%s, type=%s ...>' % (self.id,
-                 self.label, self.type)).encode('utf-8')
+                 self.label, self.type))
 
 
 class NotificationPlan(object):
@@ -124,7 +124,7 @@ class NotificationPlan(object):
         return self.driver.delete_notification_plan(self)
 
     def __repr__(self):
-        return ('<NotificationPlan: id=%s...>' % (self.id)).encode('utf-8')
+        return ('<NotificationPlan: id=%s...>' % (self.id))
 
 
 class CheckType(object):
@@ -134,7 +134,7 @@ class CheckType(object):
         self.fields = fields
 
     def __repr__(self):
-        return ('<CheckType: id=%s ...>' % (self.id)).encode('utf-8')
+        return ('<CheckType: id=%s ...>' % (self.id))
 
 
 class Metric(object):
@@ -143,7 +143,7 @@ class Metric(object):
         self.driver = driver
 
     def __repr__(self):
-        return ('<Metric: name=%s ...>' % (self.name)).encode('utf-8')
+        return ('<Metric: name=%s ...>' % (self.name))
 
 class DataPoint(object):
     def __init__(self, name, driver, average, numPoints):
@@ -153,7 +153,7 @@ class DataPoint(object):
         self.numPoints = numPoints
 
     def __repr__(self):
-        return ('<DataPoint: timestamp=%s ...>' % (self.name)).encode('utf-8')
+        return ('<DataPoint: timestamp=%s ...>' % (self.name))
 
 
 class NotificationType(object):
@@ -162,7 +162,7 @@ class NotificationType(object):
         self.fields = fields
 
     def __repr__(self):
-        return ('<NotificationType: id=%s ...>' % (self.id)).encode('utf-8')
+        return ('<NotificationType: id=%s ...>' % (self.id))
 
 
 class Alarm(object):
@@ -186,7 +186,7 @@ class Alarm(object):
         return self.driver.delete_alarm(self)
 
     def __repr__(self):
-        return ('<Alarm: id=%s, label=%s ...>' % (self.id, self.label)).encode('utf-8')
+        return ('<Alarm: id=%s, label=%s ...>' % (self.id, self.label))
 
 
 class Check(object):
@@ -217,7 +217,7 @@ class Check(object):
 
     def __repr__(self):
         return ('<Check: id=%s label=%s...>' %
-                (self.id, self.label)).encode('utf-8')
+                (self.id, self.label))
 
 
 class AlarmChangelog(object):
@@ -234,7 +234,7 @@ class AlarmChangelog(object):
 
     def __repr__(self):
         return ('<AlarmChangelog: id=%s alarm_id=%s, state=%s...>' % (
-          self.id, self.alarm_id, self.state)).encode('utf-8')
+          self.id, self.alarm_id, self.state))
 
 
 class LatestAlarmState(object):
@@ -251,8 +251,7 @@ class LatestAlarmState(object):
     def __repr__(self):
         return ('<LatestAlarmState: entity_id=%s, check_id=%s, alarm_id=%s, '
                 'state=%s ...>' %
-                (self.entity_id, self.check_id, self.alarm_id, self.state)) \
-                .encode('utf-8')
+                (self.entity_id, self.check_id, self.alarm_id, self.state))
 
 
 class AgentToken(object):
@@ -266,7 +265,7 @@ class AgentToken(object):
 
     def __repr__(self):
         return ('<AgentToken: id=%s, label=%s, token=%s>' %
-                (self.id, self.label, self.token)).encode('utf-8')
+                (self.id, self.label, self.token))
 
 
 class Agent(object):
@@ -279,7 +278,7 @@ class Agent(object):
 
     def __repr__(self):
         return ('<Agent: id=%s, last_connected=%s>' %
-            (self.id, self.last_connected)).encode('utf-8')
+            (self.id, self.last_connected))
 
 
 class AgentConnection(object):
@@ -298,7 +297,7 @@ class AgentConnection(object):
 
     def __repr__(self):
         return ('<AgentConnection: id=%s, agent_id=%s, guid=%s>' %
-            (self.id, self.agent_id, self.guid)).encode('utf-8')
+            (self.id, self.agent_id, self.guid))
 
 
 class Suppression(object):
@@ -324,7 +323,7 @@ class Suppression(object):
 
     def __repr__(self):
         return ('<Suppression: id=%s, start_time=%s, end_time=%s>' %
-            (self.id, self.start_time, self.end_time)).encode('utf-8')
+            (self.id, self.start_time, self.end_time))
 
 
 class SuppressionLog(object):
@@ -349,7 +348,7 @@ class SuppressionLog(object):
         return ('<SuppressionLog: id=%s, entity=%s, alarm=%s, check=%s,'
                 'state=%s, timestamp=%s>' %
             (self.id, self.entity_id, self.alarm_id, self.check_id,
-             self.state, self.timestamp)).encode('utf-8')
+             self.state, self.timestamp))
 
 
 class MonitoringDriver(object):

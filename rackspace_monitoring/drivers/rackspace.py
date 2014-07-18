@@ -56,7 +56,7 @@ class RackspaceMonitoringValidationError(LibcloudError):
     def __repr__(self):
         string = '<ValidationError type=%s, ' % (self.type)
         string += 'message="%s", details=%s>' % (self.message, self.details)
-        return string.encode('utf-8')
+        return string
 
 
 class RackspaceMonitoringResponse(Response):
